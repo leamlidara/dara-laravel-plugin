@@ -41,8 +41,16 @@ APP_VERSION=1.0.0
 ## វិធឺប្រើប្រាស់
 **Global Functions**
 1. **durl($url = '')** ស្រដៀងទៅនឹង url របស់ laravel ដែរ តែ durl វា return url ចេញពី APP_URL នៅក្នុង .env ដោយលុប http ឬ https ចេញ។
+```php
+$example = durl('test');
+//$example = '//example.com/test'
+```
 
-2. **cdn_url($url, $needVersion = 1)** នឹង return url ចេញពី CDN_URL ដែលនៅក្នុង .env។ ប្រសិនបើ parameter **$needVersion = 1** នោះវានឹង return ដោយភ្ជាប់មកជាមួយ APP_VERSION ដែលនៅក្នុង .env ។ (ធ្វើបែបនេះ ដើម្បីឲ្យយើងអាច force refresh ឯកសារដោយគ្រាន់តែប្តូរ APP_VERSION នៅក្នុង .env)
+2. **cdn_url($url, $needVersion = 1)** នឹង return url ចេញពី CDN_URL ដែលនៅក្នុង .env។ ប្រសិនបើ parameter **$needVersion = 1** នោះវានឹង return ដោយភ្ជាប់មកជាមួយ APP_VERSION ដែលនៅក្នុង .env (សម្រាប់ production ឬ time() សម្រាប់ local) ។ (ធ្វើបែបនេះ ដើម្បីឲ្យយើងអាច force refresh ឯកសារដោយគ្រាន់តែប្តូរ APP_VERSION នៅក្នុង .env)
+```php
+$example = cdn_url('test.jpg', 1);
+//$example = '//example.com/test.jpg?1.0.0'
+```
 
 3. **dcleanxxs($html_text) ឬ @dcleanxxs($html_text) `សម្រាប់ View`** អនុញ្ញាតឲ្យអ្នកធ្វើការ សម្អាតកូដមួយចំនួនដែលមានហានិភ័យទៅលើ HTML នៅពេលដែលលោកអ្នកបង្ហាញ HTML ចូលទៅក្នុង view
 
@@ -82,3 +90,12 @@ APP_VERSION=1.0.0
     - **\App\Dara\DUtil::isFileSupport($controlName, $supportExtension = array('pdf'))** សម្រាប់ធ្វើការពិនិត្យមើលថាតើ ឯកសារដែលផ្តល់ឲ្យ ត្រូវបានអនុញ្ញាតឬទេ
 
 6. **DPaginate** សម្រាប់ធ្វើការជាមួយ Pagination (សម្រាប់ ធ្វើការជាមួយ Pagination ដោយប្រើ Raw SQL)
+
+```
+Example .env file:
+
+...
+APP_URL="https://example.com/"
+CDN_URL="https://cdn.example.com/"
+APP_VERSION=1.0.0
+```
