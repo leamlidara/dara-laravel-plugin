@@ -68,7 +68,7 @@ APP_VERSION=1.0.0
 3. **DDateTime** សម្រាប់ធ្វើការជាមួយ ថ្ងៃខែ
     - **\App\Dara\DDateTime::isValid($date, $format = 'Y-m-d')** សម្រាប់ធ្វើការ ពិនិត្យមើលថាតើថ្ងៃខែដែលផ្តល់ឲ្យ ត្រឹមត្រូវតាម ទម្រង់ដែលចង់បានឬទេ
     - **\App\Dara\DDateTime::convert($fromDate, $fromFormat, $toFormat)** សម្រាប់ធ្វើការ convert ថ្ងៃខែពីទម្រង់មួយ ទៅទម្រង់មួយ
-    ចំណាំ៖ ចំពោះ datetime format សូមចុចតំណរភ្ជាប់នេះ https://www.php.net/manual/en/datetime.format.php
+> ចំណាំ៖ ចំពោះ datetime format សូមចុចតំណរភ្ជាប់នេះ https://www.php.net/manual/en/datetime.format.php
 
 4. **DNumber** សម្រាប់ធ្វើការជាមួយ លេខ
     - **\App\Dara\DNumber::numberFormat($number, $precision = 2)** សម្រាប់ធ្វើការ format លេខ ដោយប្រើក្បៀស និងតាម precision ដែលកំណត់
