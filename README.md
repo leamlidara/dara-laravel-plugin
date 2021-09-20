@@ -3,7 +3,7 @@
 ## វិធឺតម្លើង
 1. ទាញយក និងចម្លងថតឯកសារ "Dara" ទៅកាន់ថតឯកសារ "app" នៃគម្រោង laravel របស់អ្នក.
 
-2. កែប្រែឯកសារ "**public/index.php**" ដោយបន្ថែមឃ្លា `include_once __DIR__.'/../app/Dara/helper.php';` នៅពីមុខ `vendor/autoload.php`<br/>ឩទាហរណ៍:<br/>
+2. កែប្រែឯកសារ "**public/index.php**" ដោយបន្ថែមឃ្លា `include_once __DIR__.'/../app/Dara/helper.php';` នៅមុន `vendor/autoload.php`<br/>ឩទាហរណ៍:<br/>
 ```php
 ...
 include_once __DIR__.'/../app/Dara/helper.php';
